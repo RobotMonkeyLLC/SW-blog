@@ -2,10 +2,10 @@ import { useContext } from "react"
 import SWContext from "../SWContext"
 
 export default function Favorties() {
-    const {favorites} = useContext(SWContext)
+    const {tasks, taskActions} = useContext(SWContext)
     return (
-        <button onClick={() => console.log(favorites)}>Favorites
-            <span>{favorites}</span>
+        <button onClick={() => console.log(tasks)}>Favorites
+            <span>{tasks.filter(x => x.isFavorite == true).length}</span>
         </button>
     )
 }

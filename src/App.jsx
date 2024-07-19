@@ -7,10 +7,8 @@ import Content from './components/Content.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
-  const {favorites} = useContext(SWContext)
   return (
     <main>
-      {favorites}
       <Nav></Nav>
       <Content></Content>
     </main>

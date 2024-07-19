@@ -1,14 +1,17 @@
+import React, { useState, useEffect, useContext } from "react";
 import Card from "./Card.jsx";
+import getData from "./getData.jsx";
+import SWContext from "../SWContext.jsx";
 
 export default function People() {
-    const data = {
-        title : "People",
-        text : "This is a card for people",
-        id : 1
-    }
+    const {tasks, taskActions} = useContext(SWContext);
+    
     return  (
         <div>
-            <Card data={data}/>
+            {tasks.map((task, index) => (
+                <Card key={index} data={task}/>
+            ))
+            }
         </div>
        
     )
