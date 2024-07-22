@@ -5,11 +5,12 @@ import Planets from './Planets.jsx';
 
 export default function Content() {
     return (
-        <div className='accordian'>
+        <div className='col-12'>
+            <div className='accordian'>
             <People></People>
+            </div>
             <Vehicles></Vehicles>
             <Planets></Planets>
         </div>
-        
     )
 }

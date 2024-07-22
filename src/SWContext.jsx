@@ -4,19 +4,13 @@ import getData from "./components/getData";
 const SWContext = createContext(null);
 
 const TaskReducer = (state, action) => {
+    
 	switch (action.type) {
     case "add":
-        state.map((task) => {
-            if (task.url === action.payload.url) {
-            return task;
-            }
-        });
-        console.log(action.payload)
-      return [...state, action.payload];
+        if (state.find((task) => task.name == action.payload.name)) return state;
+        return [...state, action.payload];
     case "remove":
-      let newState=[...state]
-		newState.splice(action.index, 1);
-      return newState
+        return state.filter((task) => task.url !== action.payload);
     case "toggleFav":
         return state.map((task) => {
             if (task.url === action.payload) {
@@ -37,7 +31,19 @@ export function SWProvider({ children }) {
         data.map((person) => {
             taskActions({ type: "add", payload: person });
         });
-    });
+    }).then(() => {
+        getData("planets").then((data) => {
+            data.map((planet) => {
+                taskActions({ type: "add", payload: planet });
+            });
+        });
+    }).then(() => {
+        getData("vehicles").then((data) => {
+            data.map((vehicle) => {
+                taskActions({ type: "add", payload: vehicle });
+            });
+        });
+    })
   }, []);
 
   return (

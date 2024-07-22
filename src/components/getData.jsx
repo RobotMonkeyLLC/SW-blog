@@ -6,6 +6,7 @@ export const getData = async(type) => {
     .then(data => {
         data.map(x => {
             x.isFavorite=false;
+            x.category=type;
         });
     });
     return people;
