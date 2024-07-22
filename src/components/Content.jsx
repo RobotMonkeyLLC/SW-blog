@@ -5,7 +5,7 @@ import Planets from './Planets.jsx';
 
 export default function Content() {
     return (
-        <div>
+        <div className='accordian'>
             <People></People>
             <Vehicles></Vehicles>
             <Planets></Planets>

@@ -7,7 +7,7 @@ export default function People() {
     const {tasks, taskActions} = useContext(SWContext);
     
     return  (
-        <div>
+        <div className="row">
             {tasks.map((task, index) => (
                 <Card key={index} data={task}/>
             ))
