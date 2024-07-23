@@ -9,14 +9,16 @@ export default function Card({ data }) {
     }
     
     return (
-        <div className="card col-3">
+        <div className="card col-5">
             <img className="card-img-top" src="..." alt="Card image cap"/>
             <div className="card-body">
                 <h5 className="card-title">{data.name}</h5>
-                <p className="card-text">{data.text}</p>
+                <p className="card-text">Gender: {data.gender}</p>
+                <p className="card-text">Hair Color: {data.hair_color}</p>
+                <p className="card-text">Eye Color: {data.eye_color}</p>
                 <div>
                     <a href="#" className="btn btn-primary">Learn More</a>
-                    <button onClick={() => handleFavorite(data.url)} className={"btn " +( data.isFavorite ? 'active' : '')}>Favorite</button>
+                    <button onClick={() => handleFavorite(data.name)} className={"btn " +( data.isFavorite ? 'active' : '')}>Favorite</button>
                 </div>
                 
             </div>
