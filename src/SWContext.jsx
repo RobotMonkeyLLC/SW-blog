@@ -13,7 +13,7 @@ const TaskReducer = (state, action) => {
         return state.filter((task) => task.url !== action.payload);
     case "toggleFav":
         return state.map((task) => {
-            if (task.url === action.payload) {
+            if (task.name === action.payload) {
             return { ...task, isFavorite: !task.isFavorite };
             }
             return task;

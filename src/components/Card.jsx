@@ -1,11 +1,14 @@
 import { useContext } from "react";
 import SWContext from "../SWContext.jsx";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Card({ data }) {
     const { taskActions } = useContext(SWContext);
 
-    function handleFavorite(url) {
-        taskActions({ type: "toggleFav", payload: url });
+    const navigate = useNavigate();
+
+    function handleFavorite(name) {
+        taskActions({ type: "toggleFav", payload: name });
     }
     
     return (
@@ -17,7 +20,7 @@ export default function Card({ data }) {
                 <p className="card-text">Hair Color: {data.hair_color}</p>
                 <p className="card-text">Eye Color: {data.eye_color}</p>
                 <div>
-                    <a href="#" className="btn btn-primary">Learn More</a>
+                    <Link to="/details/1">Learn More</Link>
                     <button onClick={() => handleFavorite(data.name)} className={"btn " +( data.isFavorite ? 'active' : '')}>Favorite</button>
                 </div>
                 
