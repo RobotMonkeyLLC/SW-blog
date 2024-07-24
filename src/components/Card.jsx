@@ -27,7 +27,7 @@ export default function Card({ data }) {
 
     return (
         <div className="card col-5">
-            <img className="card-img-top m-auto" src={imageRouter(data.url)} alt="Card image cap" style={{width:"60%"}}/>
+            <img className="card-img-top m-auto h-100" src={imageRouter(data.url)} alt="Card image cap" style={{width:"60%"}}/>
             <div className="card-body text-start">
                 <h5 className="card-title fw-bold">{data.name}</h5>
                 {/* <p className="card-text">Gender: {data.gender}</p>
