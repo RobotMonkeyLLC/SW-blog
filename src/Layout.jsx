@@ -9,7 +9,7 @@ export const Layout = () => {
             <BrowserRouter>
                 <Routes>
                     <Route element={<Home />} path="/" />
-                    <Route element={<Detail />} path="/details/:id"/>
+                    <Route element={<Detail />} path="/details/:category/:id"/>
                 </Routes>
             </BrowserRouter>
         </div>

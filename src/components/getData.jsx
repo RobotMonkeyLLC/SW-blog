@@ -1,6 +1,7 @@
 export const getData = async(type) => {
     let people;
-    await fetch('https://swapi.dev/api/'+type+'/')
+    let baseUrl = 'https://swapi.dev/api/';
+    await fetch(baseUrl+type+'/')
     .then(response => response.json())
     .then(data => people = data.results)
     .then(data => {
@@ -8,6 +9,7 @@ export const getData = async(type) => {
             x.isFavorite=false;
             // used to bridge between the API and the Card component
             x.category = type == 'people' ? 'characters' : type;
+            x.path = x.url.replace(baseUrl, '');
         });
     });
     return people;
