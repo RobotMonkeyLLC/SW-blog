@@ -6,7 +6,8 @@ export const getData = async(type) => {
     .then(data => {
         data.map(x => {
             x.isFavorite=false;
-            x.category=type;
+            // used to bridge between the API and the Card component
+            x.category = type == 'people' ? 'characters' : type;
         });
     });
     return people;

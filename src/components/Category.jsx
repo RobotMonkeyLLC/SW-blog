@@ -3,28 +3,28 @@ import Card from "./Card.jsx";
 import getData from "./getData.jsx";
 import SWContext from "../SWContext.jsx";
 
-export default function Vehciles() {
+export default function Category({category}) {
     const {tasks, taskActions} = useContext(SWContext);
     
     return  (
-        <div className="accordian-item" id="vehicleAccordian">
+        <div className="accordian-item" id="peopleAccordian">
             <h2 className="accordian-header text-danger" 
-                id="headingThree">
-                <button className="accordion-button" 
+                id="headingOne">
+                <button className="accordion-button fs-2" 
                     type="button" 
                     data-bs-toggle="collapse" 
-                    data-bs-target="#collapseThree" 
+                    data-bs-target="#collapseOne" 
                     aria-expanded="true" 
-                    aria-controls="collapseThree">
-                    Vehicles
+                    aria-controls="collapseOne">
+                    {category}
                 </button>
             </h2>
-            <div id="collapseThree" 
+            <div id="collapseOne" 
                 className="accordion-collapse collapse show" 
-                aria-labelledby="headingThree" 
-                data-bs-parent="#vehicleAccordian">
+                aria-labelledby="headingOne" 
+                data-bs-parent="#peopleAccordian">
                 <div className="accordian-body row flex-nowrap overflow-scroll">
-                    {tasks.filter(x => x.category == 'vehicles').map((task, index) => (
+                    {tasks.filter(x => x.category == category.toLowerCase()).map((task, index) => (
                         <Card key={index} data={task}/>
                     ))
                     }
