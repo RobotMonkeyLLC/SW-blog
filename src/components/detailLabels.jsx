@@ -5,8 +5,8 @@ const detailLabels = {
             label: ['Gender:', 'Hair Color:', 'Eye Color:']
         },
         detail: {
-            name: ['height', 'mass', 'hair_color', 'eye_color'],
-            label: ['Name', 'Birth Year', 'Gender', 'Height']
+            name: ['name', 'gender', 'hair_color', 'eye_color'],
+            label: ['Name', 'Gender', 'Height', 'Hair Color', 'Eye Color']
         }
     },
     planets: {
