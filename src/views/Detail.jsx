@@ -1,23 +1,25 @@
 import React , {useContext} from "react";
 import SWContext from "../SWContext";
 import { Link, useParams } from "react-router-dom";
-import detailLabels from "../components/detailLabels";
+import detailLabels from "../components/detailLabels.jsx";
 
 export default function Detail() {
-    const { id, category } = useParams();
-    const { tasks } = useContext(SWContext);
+    let { id, category } = useParams();
+    const { tasks, taskActions } = useContext(SWContext);
     return (
         <div className="container">
         <div className="row">
             <div className="col-12">
                 <h1>Detail {id} {category}</h1>
-                {/* {
-                    detailLabels[category].detail.label.map((x,i) => (
-                        <p key={i} className="card-text">
-                            {x}
-                        </p>
-                    ))
-                } */}
+                {
+                    ['','',''].map(
+                        (x,i) => (
+                            <p key={i}>
+                                {i}
+                            </p>
+                        )
+                    )
+                }
             </div>
         </div>
         </div>
