@@ -6,7 +6,6 @@ import Nav from './components/Nav.jsx'
 import { Layout } from './Layout.jsx'
 
 function App() {
-  
   return (
     <main>
       <Nav></Nav>

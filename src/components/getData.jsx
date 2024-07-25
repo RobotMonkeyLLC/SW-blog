@@ -1,3 +1,5 @@
+import imageRouter from './imageRouter'
+
 export const getData = async(type) => {
     let people;
     let baseUrl = 'https://swapi.dev/api/';
@@ -10,6 +12,7 @@ export const getData = async(type) => {
             // used to bridge between the API and the Card component
             x.category = type == 'people' ? 'characters' : type;
             x.path = x.url.replace(baseUrl, '');
+            x.image = imageRouter(x.url);
         });
     });
     return people;

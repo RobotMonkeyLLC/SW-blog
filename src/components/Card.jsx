@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import SWContext from "../SWContext.jsx";
 import { Link } from "react-router-dom";
-import imageRouter from "./imageRouter.jsx";
 import detailLabels from "./detailLabels.jsx";
 
 export default function Card({ data }) {
@@ -13,7 +12,7 @@ export default function Card({ data }) {
 
     return (
         <div className="card col-5">
-            <img className="card-img-top m-auto h-100" src={imageRouter(data.url)} alt="Card image cap" style={{width:"60%"}}/>
+            <img className="card-img-top m-auto h-100" src={data.image} alt="Card image cap" style={{width:"60%"}}/>
             <div className="card-body text-start">
                 <h5 className="card-title fw-bold">{data.name}</h5>
                 {/* <p className="card-text">Gender: {data.gender}</p>
@@ -26,7 +25,7 @@ export default function Card({ data }) {
                 ))
                 }
                 <div className="d-flex justify-content-between">
-                    <Link className="btn btn-outline-primary" to={`/details/`+data.path}>Learn More</Link>
+                    <Link className="btn btn-outline-primary" to={`/`+data.path}>Learn More</Link>
                     <button onClick={() => handleFavorite(data.name)} className={"btn btn-outline-warning bi bi-heart" +( data.isFavorite ? '-fill' : '')}></button>
                 </div>
                 
