@@ -8,21 +8,20 @@ export default function Detail() {
     const { tasks, taskActions } = useContext(SWContext);
     return (
         <div className="container">
-        <div className="row">
-            <div className="col-12">
-                <h1>Detail {id} {category}</h1>
-                {
-                    ['','',''].map(
-                        (x,i) => (
-                            <p key={i}>
-                                {i}
-                            </p>
+            <div className="row">
+                <div className="col-12">
+                    <h1>Detail {id} {category}</h1>
+                    {
+                        ['','',''].map(
+                            (x,i) => (
+                                <p key={i}>
+                                    {i}
+                                </p>
+                            )
                         )
-                    )
-                }
+                    }
+                </div>
             </div>
-        </div>
-        </div>
         </div>
     );
 }
