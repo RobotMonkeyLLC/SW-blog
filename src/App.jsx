@@ -7,7 +7,7 @@ import { Layout } from './Layout.jsx'
 
 function App() {
   return (
-    <div className='d-flex flex-column'>
+    <div className='d-flex flex-column '>
       <Nav></Nav>
       <Layout></Layout>
     </div>
