@@ -11,7 +11,7 @@ export default function Card({ data }) {
     }
 
     return (
-        <div className="accordian card col-5 m-2 p-0">
+        <div className="accordian card col-3 col-md-5 m-2 p-0">
             <img className="m-auto img-card-top" src={data.image} alt="Card image cap" style={{height:"20rem"}}/>
             <div className="card-body text-start">
                 <h5 className="card-title fw-bold">{data.name}</h5>

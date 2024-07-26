@@ -4,8 +4,8 @@ import logo from '../assets/star-wars-logo.svg';
 
 export default function Nav() {
     return (
-        <nav className='navbar navbar-expand-md justify-content-between bg-secondary-subtle align-self-xl-center px-5' style={{width: "100vw"}}>
-            <div className='container-fluid'>
+        <nav className='navbar navbar-expand-md justify-content-between bg-secondary-subtle align-self-xl-center px-md-5' style={{width: "100vw"}}>
+            <div className='container-fluid px-md-5 flex-row-reverse flex-md-row'>
                 <button className="navbar-toggler" 
                         type="button" 
                         data-bs-toggle="collapse" 
