@@ -7,10 +7,10 @@ import { Layout } from './Layout.jsx'
 
 function App() {
   return (
-    <main>
+    <div className='d-flex flex-column'>
       <Nav></Nav>
       <Layout></Layout>
-    </main>
+    </div>
   )
 }
 

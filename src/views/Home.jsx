@@ -3,7 +3,7 @@ import Category from '../components/Category.jsx';
 
 export default function Home() {
     return (
-        <div className='col-12'>
+        <div className='mt-3'>
             <div className='accordian'>
                 <Category category="Characters"></Category>
             </div>
