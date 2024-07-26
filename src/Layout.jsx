@@ -5,13 +5,11 @@ import Detail from './views/Detail.jsx';
 
 export const Layout = () => {
     return (
-        <div>
             <BrowserRouter>
                 <Routes>
                     <Route element={<Home />} path="/" />
                     <Route element={<Detail />} path=":category/:id"/>
                 </Routes>
             </BrowserRouter>
-        </div>
     );
 }
